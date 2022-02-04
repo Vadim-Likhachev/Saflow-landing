@@ -1,0 +1,416 @@
+@import "./mixin";
+@import "./variable";
+@import "./breakpoints";
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body, button {
+    background: #F4F7FF;
+}
+
+a, button{
+    cursor: $cursor;
+}
+
+button {
+    @include font("Sora", normal, 500, 16px);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    transition: all, ease-in-out .25s;
+
+    &:hover {
+        transition: all, ease-in-out 0;
+    }
+}
+
+.header {
+    max-width: 1280px;
+    @include margin-l-r-auto;
+
+    .dashboard-img {
+        width: 100%;
+        margin-top: 72px;
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom:  1px solid rgba(78, 90, 133, .2);
+
+    button {
+        height: 56px;
+        width: 94px;
+        background-color: #98A6C7;
+
+        &:hover {
+            background: $color-blue;
+        }
+    }
+}
+
+.intro {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1060px;
+    @include margin-l-r-auto;
+    align-items: center;
+    padding-right: 20px;
+
+    h1 {
+        @include font("Sora", normal, 700, 64px);
+        letter-spacing: -0.03em;
+        width: 456px;
+        line-height: 80px;
+    }
+
+    p {
+       color: $text-color;
+       @include font("Sora", normal, 400, 20px);
+       letter-spacing: -0.02em;
+       line-height: 32px;
+    }
+
+    button {
+        background-color: $color-blue;
+        width: 188px;
+        height: 56px;
+        margin-top: 32px;
+
+        &:hover {
+            background: #0ca9e7;
+        }
+    }
+
+    .price-plans {
+        width: 400px;
+    }
+}
+
+.resourses {
+    margin-top: 94px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1060px;
+    @include margin-l-r-auto;
+    padding-bottom: 96px;
+    align-items: center;
+    border-bottom:  1px solid rgba(78, 90, 133, .1);
+}
+
+.main {
+    max-width: 1280px;
+    margin-top: 96px;
+    padding-bottom: 132px;
+    @include margin-l-r-auto;
+    h2 {
+        @include font("Sora", normal, 600, 48px);
+        color: $heading-color;
+    }
+
+    p {
+        @include font("Sora", normal, 400, 20px);
+        line-height: 32px; 
+        color: $text-color;
+        max-width: 400px;
+    }
+}
+
+.features {
+    max-width: 840px;
+    @include margin-l-r-auto;
+
+    p {
+        margin-top: 16px;
+    }
+}
+
+.opport {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .opport-item {
+        max-width: 400px;
+        padding: 32px;
+        border: 1px solid rgba(204, 210, 233, 0.5);
+        margin-bottom: 32px;
+        transition: all, ease-in-out .25s;
+
+        &:nth-child(odd) {
+            margin-right: 40px;
+        }
+
+        &:nth-child(n+5) {
+            margin-bottom: 0px;
+        }
+
+        &:hover {
+            transition: all, ease-in-out 0s;
+            cursor: $cursor;
+            border: 1px solid #fff;
+            background: #fff;
+        }
+    }
+
+    h3 {
+        @include font("Sora", normal, 600, 24px);
+        color: $features-color;
+        margin-top: 32px;
+    }
+
+    p {
+        margin-top: 16px;
+        @include font("Sora", normal, 400, 16px);
+        line-height: 24px; 
+        color: $features-color;
+        opacity: .5;
+        max-width: 336px;
+    }
+}
+
+.start {
+    background: $color-blue;
+    border-radius: 24px;
+    max-width: 840px;
+    padding: 72px 110px;
+    margin-top: 96px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+        background: $color-blue;
+    }
+
+    .ready {
+        @include font("Sora", normal, 500, 20px);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+    
+    .trial {
+        @include font("Sora", normal, 600, 36px);
+        letter-spacing: -0.03em;
+        color:white;
+        margin-top: 16px;
+    }
+
+    button {
+        margin-top: 32px;
+        background: #689EFF;
+        @include btn-get;
+
+        &:hover {
+            background: #0ca9e7;
+        }
+    } 
+}
+
+.saf {
+    @include font("Sora", normal, 500, 20px);
+    text-transform: uppercase;
+    color: $text-color;
+    margin-bottom: 8px;    
+}
+
+.how-work {
+    margin-top: 148px;
+    max-width: 1094px;
+    @include margin-l-r-auto;
+    text-align: center;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-main {
+    margin-top: 96px;
+
+}
+
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 96px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        @include font("Sora", normal, 600, 36px);
+        color: $heading-color;
+        margin-bottom: 28px;
+    }
+}
+
+.pricing {
+    margin-top: 172px;
+    @include margin-l-r-auto;
+    text-align: center;
+}
+
+.pricing-main {
+    margin-top: 176px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes goToTop {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 81px;
+        background: #162044;
+        box-shadow: 0px 35px 45px rgba(7, 14, 39, 0.05);
+    }
+}
+
+.tarif {
+    border-radius: 16px;
+    width: 400px;
+    background: #081131;
+    padding: 48px 106px 48px 48px;
+    box-shadow: 0px 35px 45px rgba(7, 14, 39, 0.05);
+    position: relative;
+
+    &:hover {
+        cursor: $cursor;
+        animation-name: goToTop;
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+
+        button {
+            background: $color-blue;
+
+            &:hover {
+                background: #0ca9e7;
+            }
+        }
+    }
+
+    button {
+        @include btn-get;
+        background: #4E5A85;
+        margin-top: 48px; 
+    }
+}
+
+.tarif-main {
+    margin-top: 48px;
+    ul {
+        list-style: none;
+        text-align: left;
+        color: #CCD2E9;
+        @include font("Sora", normal, 400, 16px);
+    }
+
+    li {
+        background: url("/assets/svg/Check\ Icon.svg") no-repeat 0 -1px;
+        margin-bottom: 24px;
+        padding-left: 36px;
+    }
+}
+
+.tarif-head {
+    text-align-last: left;
+    padding-bottom: 48px;
+    border-bottom: 2px solid rgba(78, 90, 133, .16);
+    h3 {
+        @include font("Sora", normal, 500, 20px);
+        text-transform: uppercase;
+        color: $text-color;
+        margin-bottom: 12px;
+    }
+    span {
+        @include font("Sora", normal, 600, 56px);
+        text-transform: uppercase;
+        color: #F4F7FF;;
+    }
+
+    .dollar {
+        color: #4E5A85;
+    }
+}
+
+.second-start {
+    margin-top: 172px;
+    @include margin-l-r-auto;
+    max-width: 1060px;
+    padding: 50px 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        display: block;
+    }
+
+    .second-ready {
+        font-size: 14px;
+    }
+
+    button {
+        margin: 0;
+    };
+}
+
+.footer {
+    background: #162044;
+    padding: 48px 0;
+
+    .footer-content {
+        max-width: 1060px;
+        display: flex;
+        justify-content: space-between;
+        @include margin-l-r-auto;
+    }
+    span {
+        @include font("Sora", normal, 400, 14px);
+        color: #CCD2E9;
+    }
+
+    .icons {
+        display: flex;
+
+        a {
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .privacy {
+        span {
+            &:first-child {
+                margin-right: 24px;
+            }
+        }
+    }
+}
